@@ -1,3 +1,4 @@
+import TaskCard from './TaskCard'
 
 export function TaskList(props) {
   
@@ -5,10 +6,7 @@ export function TaskList(props) {
   return (
     <div>
       {props.tasks.map((task) => (
-        <div key={task.id}>
-          <h1>{task.title}</h1>
-          <p>{task.description}</p>
-        </div>
+        <TaskCard key={task.id} task={task}/>
       ))}
     </div>
   )
